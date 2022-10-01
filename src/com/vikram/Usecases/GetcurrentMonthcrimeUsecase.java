@@ -12,9 +12,9 @@ public class GetcurrentMonthcrimeUsecase {
 		public static void OneMonthCrime() {
 			CrimeDAO dao = new CrimeDAOImp();
 			Scanner sc= new Scanner (System.in);
-			System.out.println("Enter the  Date of the Month :");
+			System.out.println("Enter the  start Date of the Month :");
 			String s1=sc.next();
-			System.out.println("Enter the Date of the Month End: ");
+			System.out.println("Enter the end Date of the Month End: ");
 			String s2=sc.next();
 			
 			try {

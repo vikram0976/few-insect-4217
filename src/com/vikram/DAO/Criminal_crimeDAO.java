@@ -9,4 +9,5 @@ public interface Criminal_crimeDAO {
 
 	public List<Criminal_Info>  CrimeFile(String cname)  throws Criminal_InfoExcetion;
 	
+	public String AddCriminalCrime(int id, int id1);
 }

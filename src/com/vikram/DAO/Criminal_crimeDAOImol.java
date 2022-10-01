@@ -20,9 +20,9 @@ public class Criminal_crimeDAOImol implements Criminal_crimeDAO {
 
 		try(Connection conn= DBUtil.provideConnection();) {
 		
-			PreparedStatement ps = conn.prepareStatement ("select c.cname, cr.crime_name from criminal c "
-					+ "INNER JOIN criminfo cr INNER JOIN criminal_crime ccr ON "
-					+ "ccr.crimId=cr.crimId AND ccr.cid=c.cid AND cr.crime_name=?");
+			PreparedStatement ps = conn.prepareStatement ("select c.cname, cr.crime_name from criminal c INNER JOIN criminfo cr INNER JOIN "
+					+ "criminal_crime ccr ON ccr.crimId=cr.crimId AND "
+					+ "ccr.cid=c.cid AND cr.crime_name=?");
 			ps.setString(1,cname );
 			ResultSet rs= ps.executeQuery();
 			while(rs.next()) {
@@ -47,6 +47,29 @@ public class Criminal_crimeDAOImol implements Criminal_crimeDAO {
 			
 			return Criminals;
 	
+	}
+
+	@Override
+	public String AddCriminalCrime(int id, int id1) {
+		String msg = "not inserted";
+		try (Connection con = DBUtil.provideConnection()){
+			
+		PreparedStatement ps =	con.prepareStatement("insert into criminal_crime values(?,?)");
+		ps.setInt(1, id);
+		ps.setInt(2, id1);
+		
+		int x = ps.executeUpdate();
+		if(x>0) {
+			msg = "Criminal crime addedd succesfully";
+		}
+		else {
+			msg = "unable to add";
+		}
+			
+		} catch (SQLException e) {
+			msg = e.getMessage();
+		}
+		return msg;
 	}
 
 }
