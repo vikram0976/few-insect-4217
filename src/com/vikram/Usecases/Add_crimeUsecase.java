@@ -16,23 +16,23 @@ public class Add_crimeUsecase {
 			Scanner sc= new Scanner (System.in);
 			
 			
-			System.out.println("Enter Crime Date: ");
+			System.out.println("Enter the Crime Date: ");
 			String date1=sc.nextLine();
 			
-			System.out.println("Enter Crime Place : ");
+			System.out.println("Enter the Crime Place : ");
 			String place=sc.nextLine();
 			
 			
-			System.out.println("Enter Crime Type Name : ");
+			System.out.println("Enter the Crime Type Name : ");
 			String crime=sc.nextLine();
 			
-			System.out.println("Enter Crime Victims : ");
+			System.out.println("Enter the Crime Victims : ");
 			String victim=sc.nextLine();
 			
 			System.out.println("Enter Detail Description of crime: ");
 			String desc=sc.nextLine();
 			
-			System.out.println("Enter Crime Suspected name : ");
+			System.out.println("Enter the Crime Suspected name : ");
 			String suspect=sc.nextLine();
 			
 			CrimeDAO dao1=new CrimeDAOImp();

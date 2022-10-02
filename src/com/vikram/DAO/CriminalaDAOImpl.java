@@ -150,8 +150,7 @@ try (Connection conn= DBUtil.provideConnection()){
 			ps.setInt(2, criminalInfo.getCid());
 			ps.executeUpdate();
 			
-		
-				
+			
 				msg="Table Updated Successfully";
 			
 		} catch (SQLException e) {

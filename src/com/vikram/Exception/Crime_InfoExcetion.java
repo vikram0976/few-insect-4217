@@ -1,4 +1,4 @@
-package com.vikram.Exception;
+ package com.vikram.Exception;
 
 public class Crime_InfoExcetion extends Exception{
 

@@ -16,7 +16,7 @@ public class GetCrimeStatusCountUsecase {
 		
 		try {
 		int c=dao.statuscount(s1);
-		System.out.println("Total Number of soved/Unsolved Cases : "+c);	
+		System.out.println("Total Number of solved/Unsolved Cases : "+c);	
 			
 		} 
 		catch (Crime_InfoExcetion e) {

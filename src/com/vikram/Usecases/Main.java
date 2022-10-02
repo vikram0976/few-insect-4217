@@ -26,8 +26,8 @@ public class Main {
 				+ "\n5.No of solving  and unsolving crime"
 				+ "\n6.Number of crimes recorded in the current month"
 				+ "\n7.Add Crime Wise criminal Record"
-				+ "\n8.Crime Wise criminal Record"
-				+ "\n8.Exit");
+				+ "\n8.View Crime Wise criminal Record"
+				+ "\n9.Exit");
 		int Choice=sc.nextInt();
 		switch(Choice) {
 		
@@ -66,7 +66,7 @@ public class Main {
 			
 			break;
 		case 8:
-			System.out.println("Crime Wise criminal Record");
+			System.out.println("View Crime Wise criminal Record");
 			GetCriminal_crimeUsecase.CriminalCrimeRecord();
 			
 			break;

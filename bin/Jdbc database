@@ -22,7 +22,7 @@ Table -2 ---------------------------------
 	Age int,
 	Gender varchar(10),
 	Address varchar(30),
-	Face_mark varchar(20),
+	Face_mark varchar(30),
 	Crime_Area varchar(20),
 	Crime_name varchar(20)
 	);
